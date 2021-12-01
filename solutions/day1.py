@@ -32,3 +32,19 @@ assert windowed_increases(example_depths) == 5
 with open('data/day1/part1.txt', 'r') as f:
     depths = [int(x.strip()) for x in f.readlines()]
     print(windowed_increases(depths))
+
+
+# Prettier solutions using zip found elsewhere
+# Nice trick to remember
+def part1(depths):
+    pairs = zip(depths, depths[1:])
+    return sum([a < b for a,b in pairs])
+
+assert part1(example_depths) == 7
+
+def part2(depths):
+    windows = list(zip(depths, depths[1:], depths[2:]))
+    pairs = zip(windows, windows[1:])
+    return sum([sum(a) < sum(b) for a,b in pairs])
+
+assert part2(example_depths) == 5
