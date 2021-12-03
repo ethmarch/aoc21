@@ -12,7 +12,7 @@ example_depths = [199, 200, 208, 210, 200, 207, 240, 269, 260, 263]
 
 assert count_increases(example_depths) == 7
 
-with open('data/day1.txt', 'r') as f:
+with open('data/day01.txt', 'r') as f:
     depths = [int(x.strip()) for x in f.readlines()]
     print(count_increases(depths))
 
@@ -29,7 +29,7 @@ def windowed_increases(depths: list[int]) -> int:
 
 assert windowed_increases(example_depths) == 5
 
-with open('data/day1.txt', 'r') as f:
+with open('data/day01.txt', 'r') as f:
     depths = [int(x.strip()) for x in f.readlines()]
     print(windowed_increases(depths))
 

@@ -42,7 +42,7 @@ test_sub = Sub()
 test_sub.move(test_course)
 assert test_sub.posn == Point(15, 10)
 
-with open('data/day2.txt', 'r') as f:
+with open('data/day02.txt', 'r') as f:
     parsed = [line.strip().split() for line in f.readlines()]
     course = [(a, int(b)) for a,b in parsed]
     sub = Sub()
@@ -84,7 +84,7 @@ test_sub2 = Sub2()
 test_sub2.move(test_course)
 assert test_sub2.posn == Point(15, 60)
 
-with open('data/day2.txt', 'r') as f:
+with open('data/day02.txt', 'r') as f:
     parsed = [line.strip().split() for line in f.readlines()]
     course = [(a, int(b)) for a,b in parsed]
     sub = Sub2()
