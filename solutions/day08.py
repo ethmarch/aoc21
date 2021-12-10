@@ -56,9 +56,7 @@ def create_mapping(input: List[str]) -> dict:
             uniques[unique_lengths[len(segments)]] = segments
 
     lookup = {'0101': '0', '1212': '2', '0102': '3', '1112': '5', '1111': '6', '0001': '9'}
-
     diff = lambda x,y: str(len(set(x).difference(y)))
-
     for seg in input:
         if seg not in mapping:
             lookup_key = ''.join([diff(uniques[x], seg) for x in [1,4,7,8]])
